@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css');
+
+.card {
+
+    height: 400px;
+    background: #eeecec;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    margin-bottom: 20px;
+
+    .card_left {
+        width: 40%;
+        height: 400px;
+        float: left;
+        overflow: hidden;
+        background: #eeecec;
+        border-radius: 10px;
+        img {
+            width: 100%;
+            border-radius: 10px 0 0 10px;
+            position: relative;
+        }
+    }
+
+    .card_right {
+        width: 60%;
+        float: left;
+        background: #eeecec;
+        height: 400px;
+        border-radius: 0 10px 10px 0;
+        
+        h4 {
+            color: #492424;
+            font-family: 'Montserrat',sans-serif;
+            font-weight: 700;
+            font-size: 25px;
+            text-align: left;
+            margin: 30px 0 0 0;
+            padding: 0 0 0 40px;
+            letter-spacing: 1px;
+            cursor: pointer;
+
+            &:hover{
+                color: #505050;
+            }
+        }
+    }
+
+    .card_right__review {
+        p {
+            color: #747474;
+            font-family: 'Montserrat',sans-serif;
+            font-size: 15px;
+            padding: 0 40px 0 40px;
+            letter-spacing: 1px;
+            line-height: 20px;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .card {
+        margin-top: 15px;
+        height: 230px;
+        background: #eeecec;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+ 
+        .card_left{
+            width: 40%;
+            height: 230px;
+        }
+
+        .card_right {
+            width: 60%;
+            float: left;
+            height: 230px;
+                    
+            h4 {
+                 font-size: 13px;
+            }
+        }
+
+        .card_right__review{
+            p {
+                font-size: 10px;
+                letter-spacing: 0px;
+            }
+        }
+
+        .year{
+            display: none;
+        }
+    }
+
+  }

@@ -1,0 +1,28 @@
+<div class="row center-xs">
+
+  <div class="col-lg-6 col-md-6 col-xs-12">
+    <app-detail-info *ngFor="let content of data" [contentDetail]="content.data"></app-detail-info>
+    <hr>
+    <div class="row center-xs">
+      <app-detail-credits class="col-lg-6 col-md-6 col-xs-6" *ngFor="let credit of credits | paginate: { itemsPerPage: 2, currentPage: p}" [credit]="credit"></app-detail-credits>
+      <pagination-controls class="my-pagination" (pageChange)="p = $event"></pagination-controls>
+    </div>
+  </div>
+
+  <div class="col-lg-6 col-md-6 col-xs-12">
+    <img [src]="posterImg" id="posterimg" alt="Movie/Serie">
+
+    <div class="row center-xs" id="play">
+      <div class="col-lg-6 col-md-6 col-xs-12">
+        <a (click)="showTrailer()"><i class="fa fa-play"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="showModal">
+    <app-modal-trailer (close)="close()" [trailer]="movie"></app-modal-trailer>
+  </div>
+
+  <app-spinner *ngIf="showSpinner"></app-spinner>
+
+</div>

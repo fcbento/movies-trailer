@@ -1,0 +1,77 @@
+<nav>
+
+  <div class="row start-xs">
+    <a>
+      <i class="fa fa-bars" (click)="openSideBar()"></i>
+    </a>
+  </div>
+
+  <div class="row start-xs">
+
+    <div id="sideBar" #sideBar>
+
+      <div>
+        <i class="far fa-window-close fa-3x" (click)="close()"></i>
+      </div>
+
+      <ul>
+        <li>
+          <a class="title">Movies</a>
+          <ul class="dropdown-container">
+            <li>
+              <a routerLink="/main/movies" (click)="close()">Popular</a>
+            </li>
+            <li>
+              <a routerLink="/main/searchmovies" (click)="close()">Search</a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a class="title">TV SHOWS</a>
+          <ul class="dropdown-container">
+            <li>
+              <a routerLink="/main/series" (click)="close()">Popular</a>
+            </li>
+            <li>
+              <a routerLink="/main/searchseries" (click)="close()">Search</a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a class="title">PEOPLE</a>
+          <ul class="dropdown-container">
+            <li>
+              <a routerLink="/main/people" (click)="close()">Popular</a>
+            </li>
+            <li>
+              <a routerLink="/main/searchpeople" (click)="close()">Search</a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a class="title">TRENDING</a>
+          <ul class="dropdown-container">
+            <li>
+              <a routerLink="/main/trendingall" (click)="close()">All</a>
+            </li>
+            <li>
+              <a routerLink="/main/trendingmovies" (click)="close()">Movies</a>
+            </li>
+            <li>
+              <a routerLink="/main/trendingseries" (click)="close()">TV Shows</a>
+            </li>
+            <li>
+              <a routerLink="/main/trendingpeople" (click)="close()">People</a>
+            </li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,23 @@
+<div class="row center-xs">
+  <div class="col-lg-6 col-md-6 col-xs-12">
+    <img class="profile_img" [src]="posterImg">
+  </div>
+  <div class="col-lg-6 col-md-6 col-xs-12 box">
+    <h1 class="name">{{person?.name}}</h1>
+    <span>{{person?.bio?.birthday}}</span><br>
+    <span>{{person?.bio?.place_of_birth}}</span>
+    <p class="bio">{{person?.bio?.biography}}</p>
+  </div>
+</div>
+
+<div class="row center-xs">
+  <div class="col-lg-6 col-md-6 col-xs-12">
+    <h3>KNOWN ESPECIALLY FOR</h3>
+  </div>
+</div>
+
+<div class="row center-xs">
+  <app-card class="col-lg-6 col-md-6 col-xs-12" *ngFor="let movie of person.known_for" [content]="movie"></app-card>
+</div>
+
+<app-spinner *ngIf="showSpinner"></app-spinner>

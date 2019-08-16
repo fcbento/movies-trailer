@@ -1,0 +1,7 @@
+<div id="info">
+    <h1>{{contentDetail.title}} ({{year}})</h1>
+    <span class="overview">{{contentDetail.overview}}</span>
+    <p class="tagline">{{contentDetail.tagline}}</p>
+    <p class="vote">{{contentDetail.vote_average}}</p>
+    <span *ngFor="let genre of contentDetail.genres" class="genres"> / {{genre.name}}</span>
+</div>

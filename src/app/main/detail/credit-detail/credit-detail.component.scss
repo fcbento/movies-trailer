@@ -1,0 +1,48 @@
+.profile_img{
+    width: 380px;
+    border-radius: 25px;
+}
+
+.name{
+    font-size: 2rem;
+    color: #5ebfff;
+}
+
+h3{
+    margin-top: 47px;
+    margin-bottom: 48px;
+    font-size: 2rem;
+    color: #f13363;
+}
+
+.box{
+    background-color: #f8f8f8;
+    border-radius: 40px;
+    padding: 15px;
+    .bio{
+        font-family: 'Montserrat',sans-serif;
+        color: #727272;
+        letter-spacing: 0.8px;
+        font-weight: 400;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+}
+
+@media only screen and (max-width: 600px) 
+{  
+    .profile_img{
+        width: 90%;
+    }
+
+    .name{
+        font-size: 2rem;
+    }
+
+    h3{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 2rem;
+
+    }
+}

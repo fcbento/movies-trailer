@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col-xs-12">
+        <div class='card'>
+
+            <div class='card_left'>
+                <img [src]='posterImg'>
+            </div>
+
+            <div class='card_right'>
+
+                <div class="row center-xs">
+                    <div class="col-xs-12">
+                        <h4> <a (click)="onGoToDetail(content)">{{content.title}} <span class="year">({{year}})</span></a> </h4>
+                    </div>
+                </div>
+
+                <div class="row center-xs" style="margin-top: 10px">
+                    <div class='card_right__review col-xs-12">'>
+                        <p>{{content.overview | shortenString: stringLength}}</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<div *ngIf="showModal">
+    <app-modal-trailer (close)="close()" [trailer]="content"></app-modal-trailer>
+</div>

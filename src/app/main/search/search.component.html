@@ -1,0 +1,18 @@
+<div class="row center-xs">
+
+  <div class="col-lg-10 col-md-8 col-xs-12">
+    <form>
+      <input type="text" (keyup)="onSearch($event)" name="search" placeholder="Search for {{searchType}}">
+    </form>
+  </div>
+</div>
+
+<div class="row start-xs" *ngIf="displaySearchedItems">
+  <app-card class="col-lg-6 col-md-6 col-xs-12" *ngFor="let content of contents | paginate: { itemsPerPage: 4, currentPage: p}" [content]="content"></app-card>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
+
+<div class="row start-xs" *ngIf="displaySearchedPeople">
+    <app-card-people class="col-lg-6 col-md-6 col-xs-12" *ngFor="let content of contents | paginate: { itemsPerPage: 4, currentPage: p}" [content]="content"></app-card-people>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

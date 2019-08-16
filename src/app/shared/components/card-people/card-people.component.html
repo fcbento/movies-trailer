@@ -1,0 +1,17 @@
+<div class="box">
+
+  <div class="row center-xs">
+
+    <div class="col-xs-6">
+      <img [src]="posterImg" alt="Person photo">
+      <p class="name" (click)="onLoadInfo(content)">{{content.name}}</p>
+      <p class="popularity">popularity {{content.popularity}}</p>
+    </div>
+
+  </div>
+
+  <div class="col-xs-12">
+    <p class="center-xs known" >Known for</p>
+    <app-card *ngFor="let movie of content.known_for" (close)="close()" [content]="movie"></app-card>
+  </div>
+</div>

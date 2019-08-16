@@ -1,0 +1,45 @@
+
+#cast{
+
+    #profile_img {
+        width: 80%;
+        border-radius: 25px;
+    }
+
+    .character{
+        color: #ff6982;
+        font-size: 13px;
+    }
+
+    .actor {
+        color: black;
+        cursor: pointer;
+        font-size: 15px;
+
+        &:hover{
+            color: #36bdf3;
+        }
+    }
+
+    p{
+        margin: 7px;
+    }
+
+    margin-top: 18px;
+    margin-right: 19px;
+}
+
+#credit_detail {
+    border: 3px solid #36bdf3;
+    padding: 10px;
+    display: none;
+    transition: all 1s linear;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) 
+{ 
+    #profile_img {
+        width: 100%;
+    }
+}

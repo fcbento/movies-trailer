@@ -1,0 +1,89 @@
+#sideBar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #303030;
+  overflow-x: hidden;
+  transition: all 0.1s linear;
+  padding-top: 40px;
+  //text-align: center;
+  font-family: "Bowlby One SC", cursive;
+
+  li {
+    list-style: none;
+    cursor: pointer;
+    .title {
+        font-size: 1.1rem;
+        color: #dddcdc;
+        cursor: none;
+    }
+
+  }
+
+  .dropdown-container {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+
+    a {
+      text-decoration: none;
+      color: #ffffff;  
+      &:hover {
+        color: yellow;
+      }
+    }
+
+
+  }
+}
+
+.fa-bars {
+  color:black;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.fa-window-close{
+  color: #a5f051;
+  cursor: pointer;
+  margin-left: 30px;
+}
+
+@media only screen and (max-width: 600px) 
+{  
+  #sideBar {
+    text-align: left;
+    li {
+      padding: 5px;
+      cursor: pointer;
+      .title {
+          font-size: 14px;
+      }
+    }
+  
+    .dropdown-container {
+      margin-left: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+      a {
+        text-decoration: none;
+        font-size: 13px;
+        &:hover {
+          color: yellow;
+        }
+      }
+    }
+  }
+
+  .fa-bars {
+    font-size: 2rem;
+  }
+
+  .fa-window-close{
+    margin-left: 60px;
+  }
+}

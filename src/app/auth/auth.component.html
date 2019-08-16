@@ -1,0 +1,22 @@
+<div class="row center-xs">
+  
+  <div class="col-xs-12 col-md-5 col-lg-5 box">
+    
+    <div class="row middle-xs">
+
+      <div class="col-xs-6"
+        (click)="onGoToSignIn()">
+        <p> <i class="fas fa-sign-in-alt"></i></p>
+      </div>
+     
+      <div class="col-xs-6"
+        (click)="onGoToSignUp()">
+        <p> <i class="fas fa-user-plus hvr-grow"></i></p>
+      </div>
+    
+    </div>
+   
+    <app-signin *ngIf="showSignIn"></app-signin>
+    <app-signup *ngIf="showSignUp"></app-signup>
+  </div>
+</div>
