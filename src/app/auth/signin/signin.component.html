@@ -1,8 +1,8 @@
-    <form (ngSubmit)="onSignin(f)" #f="ngForm">
-        <h1>Login</h1>
-        <input type="text" id="email" name="email" placeholder="Email" ngModel class="icon__email">
-        <input type="password" id="password" name="password" placeholder="Password" ngModel class="icon__password">
-        <input type="submit" value="Login">
-     </form>
-  
- <app-spinner *ngIf="showSpinner"></app-spinner>
+<form (ngSubmit)="onSignin(f)" #f="ngForm">
+    <p>Login</p>
+    <input type="text" id="email" name="email" placeholder="Email" ngModel class="icon__email">
+    <input type="password" id="password" name="password" placeholder="Password" ngModel class="icon__password">
+    <input type="submit" value="Login">
+</form>
+
+<app-spinner *ngIf="showSpinner"></app-spinner>
