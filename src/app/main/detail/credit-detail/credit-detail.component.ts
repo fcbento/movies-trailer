@@ -17,6 +17,7 @@ export class CreditDetailComponent implements OnInit {
   public posterImg: string;
   public server: ReturnServerString = new ReturnServerString();
   public actions: Actions = new Actions();
+  public bio: string = '';
 
   constructor(public service: GenericService) { }
 
@@ -24,11 +25,13 @@ export class CreditDetailComponent implements OnInit {
     this.loadSpinner();
     this.service.getSingleCredit(this.creditId, this.actions.Credit).subscribe((data) => {
       this.person = data['person'];
-       
+
       this.posterImg = this.server.photoUrl(this.person.profile_path);
-      
+
       this.service.getPerson(this.person.id, this.actions.Person).subscribe(data => {
         this.person.bio = data;
+        this.bio = this.person.bio.biography;
+        console.log(this.bio)
       });
     });
   }
