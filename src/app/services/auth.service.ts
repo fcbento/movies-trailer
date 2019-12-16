@@ -20,6 +20,7 @@ export class AuthService {
     .then(response => {
         swal("Yayy", "You have successfully registered. Feel free to login right now.", "success");
         this.router.navigate(['/']);
+        
       })
     
     .catch((error) => {

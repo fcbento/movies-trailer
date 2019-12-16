@@ -1,11 +1,11 @@
-<form (ngSubmit)="onSignin(f)" [formGroup]="form">
+<form (ngSubmit)="onSignin()" [formGroup]="form">
     <p>Login</p>
     <input type="text" id="email" name="email" placeholder="Email" formControlName="email" class="icon__email">
     <input type="password" id="password" name="password" placeholder="Password" formControlName="password"
         class="icon__password" minlength="6">
 
     <input type="submit" value="Login" 
-    [disabled]="form.get('email').hasError('required') ||
+           [disabled]="form.get('email').hasError('required') ||
                 form.get('email').hasError('pattern') ||
                 form.get('password').hasError('minlength') || 
                 form.get('password').hasError('required')">

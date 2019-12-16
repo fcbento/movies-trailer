@@ -24,7 +24,6 @@ export class SigninComponent implements OnInit {
 
   ngOnInit() { }
 
-
   public onSignin(): void {
 
     const email = this.form.value.email;
@@ -38,7 +37,6 @@ export class SigninComponent implements OnInit {
           this.showSpinner = false;
         }
       });
-
   }
 
   public EmailValidator() {
