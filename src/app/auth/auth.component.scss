@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Sulphur+Point&display=swap');
+
 i {
   transition: all 0.5s ease-in-out;
   color: #e2e2e2;
@@ -43,28 +45,44 @@ input:focus::-webkit-input-placeholder {
 
 input[type="text"] {
   text-align: center;
-  border: 2px solid #d4d4d4;
-  padding: 10px 10px;
+  font-family: 'Sulphur Point', sans-serif;
+  border-bottom: 1.5px solid #bebebe;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  padding: 15px 15px;
   width: 70%;
   outline: none;
-  color: #000000;
-  border-radius: 10px;
+  color: #979797;
+  border-radius: 1px;
   transition: 0.25s;
   font-size: 15px;
   margin-bottom: 10px;
+
+  &:focus{
+    border-bottom: 1.5px solid #53a6ff;
+  }
 }
 
 input[type="password"] {
   text-align: center;
-  border: 2px solid #d4d4d4;
-  padding: 10px 10px;
+  border-bottom: 1.5px solid #bebebe;
+  font-family: 'Sulphur Point', sans-serif;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  padding: 15px 15px;
   width: 70%;
   outline: none;
-  color: #000000;
-  border-radius: 10px;
+  color: #6d6b6b;
+  border-radius: 1px;
   transition: 0.25s;
   font-size: 15px;
   margin-bottom: 10px;
+
+  &:focus{
+    border-bottom: 1.5px solid #53a6ff;
+  }
 }
 
 input[type="submit"] {
@@ -85,18 +103,33 @@ input[type="submit"] {
   transition: 0.25s;
   cursor: pointer;
   width: 60%;
+  
   &:hover {
     background-color: #084281;
     border-color: #084281;
   }
+
+  &:disabled{
+    background-color: #dddddd;
+    border-color: #dddddd;
+  }
 }
 
 .icon__password {
-  background: url(https://img.icons8.com/cotton/30/000000/lock.png) no-repeat scroll 17px 7px;
+  background: url(https://img.icons8.com/cotton/20/000000/lock.png) no-repeat scroll 3px 14px;
 }
 
 .icon__email {
-  background: url(https://img.icons8.com/dusk/30/000000/gmail.png) no-repeat scroll 17px 7px;
+  background: url(https://img.icons8.com/dusk/20/000000/gmail.png) no-repeat scroll 3px 14px;
+}
+
+.error{
+  font-family: 'Sulphur Point', sans-serif;
+  color: #e04040;
+  margin: 1px;
+  font-size: 13px;
+
+  transition: all 1s ease-in-out;
 }
 
 @media only screen and (max-width: 600px) {

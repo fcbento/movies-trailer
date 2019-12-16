@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { NgForm } from "@angular/forms";
+import { NgForm, FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { AuthService } from "../../services/auth.service";
 
 @Component({
@@ -9,25 +9,39 @@ import { AuthService } from "../../services/auth.service";
 })
 export class SigninComponent implements OnInit {
 
-  constructor(public authService: AuthService) {}
-
   public showSpinner: boolean = false;
-  
-  ngOnInit() {}
+  public form: FormGroup;
 
-  public onSignin(form: NgForm): void {
-    
-    const email = form.value.email;
-    const password = form.value.password;
-    
-    this.showSpinner = true;
-    
-    this.authService.signinUser(email, password)
-    .then(data => {
-      if(data) {
-        this.showSpinner = false;
-      }
+  constructor(public formBuilder: FormBuilder, public authService: AuthService) {
+
+    let EMAILPATTERN = this.EmailValidator();
+
+    this.form = this.formBuilder.group({
+      email: ['', [Validators.required, Validators.pattern(EMAILPATTERN)]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
     });
-    
+  }
+
+  ngOnInit() { }
+
+
+  public onSignin(): void {
+
+    const email = this.form.value.email;
+    const password = this.form.value.password;
+
+    this.showSpinner = true;
+
+    this.authService.signinUser(email, password)
+      .then(data => {
+        if (data) {
+          this.showSpinner = false;
+        }
+      });
+
+  }
+
+  public EmailValidator() {
+    return /^[a-z0-9!#$%&'*+\/=?^_`{|}~.-]+@[a-z0-9]([a-z0-9-]*[a-z0-9])?(\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)*$/i;
   }
 }
