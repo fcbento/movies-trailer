@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { MainModule } from './main/main.module';
 import { AuthModule } from './auth/auth.module';
 import { SharedModule } from './shared/shared.module';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,7 +16,8 @@ import { SharedModule } from './shared/shared.module';
     MainModule,
     SharedModule,
     AuthModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    BrowserAnimationsModule
   ],
   bootstrap: [AppComponent]
 })

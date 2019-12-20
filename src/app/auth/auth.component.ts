@@ -16,12 +16,12 @@ export class AuthComponent implements OnInit {
   ngOnInit() {
   }
 
-  public onGoToSignIn(): void{
+  public onGoToSignIn(): void {
     this.showSignIn = true;
     this.showSignUp = false;
   }
 
-  public onGoToSignUp(): void{
+  public onGoToSignUp(): void {
     this.showSignIn = false;
     this.showSignUp = true;
   }

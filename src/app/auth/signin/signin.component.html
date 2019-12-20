@@ -11,19 +11,19 @@
                 form.get('password').hasError('required')">
 </form>
 
-<p class="error" *ngIf="form.get('email').hasError('pattern') && form.get('email').touched">
+<p @fade class="error" *ngIf="form.get('email').hasError('pattern') && form.get('email').touched">
     *Enter a valid email
 </p>
 
-<p class="error" *ngIf="form.get('email').hasError('required') && form.get('email').touched">
+<p @fade class="error" *ngIf="form.get('email').hasError('required') && form.get('email').touched">
     *Email is required
 </p>
 
-<p class="error" *ngIf="form.get('password').hasError('minlength') && form.get('password').touched">
+<p @fade class="error" *ngIf="form.get('password').hasError('minlength') && form.get('password').touched">
     *Password should contain at least 6 characters
 </p>
 
-<p class="error" *ngIf="form.get('password').hasError('required') && form.get('password').touched">
+<p @fade class="error" *ngIf="form.get('password').hasError('required') && form.get('password').touched">
     *Password is required
 </p>
 

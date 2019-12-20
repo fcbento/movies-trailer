@@ -1,11 +1,17 @@
 import { Component, OnInit } from "@angular/core";
 import { NgForm, FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { AuthService } from "../../services/auth.service";
+import { trigger, transition, style, animate } from "@angular/animations";
 
 @Component({
   selector: "app-signin",
   templateUrl: "./signin.component.html",
-  styleUrls: ["../auth.component.scss",]
+  styleUrls: ["../auth.component.scss"],
+  animations: [
+    trigger('fade', [
+      transition(':enter', [style({ opacity: 0 }), animate('0.2s', style({ opacity: 1 }))]),
+      //transition(':leave', [style({ opacity: 0 }), animate('0.3s', style({ opacity: 1 }))])
+    ])]
 })
 export class SigninComponent implements OnInit {
 
